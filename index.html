@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Bom de Bola</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="text-center">
+      <img src="https://img.freepik.com/vetores-gratis/bola-de-futebol-realista-isolada-de-vetor-sobre-o-branco_1284-41932.jpg?w=360" alt="Pelota" class="ball-img">
+    </div>
+
+    <div class="main-content">
+    <h1 class="text-center mb-4">Seleção de Jogadores</h1>
+  </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Adicionar Jogador</h3>
+        <input id="playerName" class="form-control mb-2" type="text" placeholder="Nome">
+        <input id="playerSector" class="form-control mb-2" type="text" placeholder="Setor (Defesa, Meio, Ataque)">
+        <input id="playerLevel" class="form-control mb-2" type="number" min="1" max="10" placeholder="Nível (1-10)">
+        <button class="btn btn-primary w-100 mb-2" onclick="addPlayer()">Adicionar Jogador</button>
+        <button class="btn btn-danger w-100" onclick="clearPlayers()">Limpar Lista</button>
+      </div>
+
+      <div class="col-md-8">
+        <h3>Lista de Jogadores</h3>
+        <ul id="playerList" class="list-group mb-3"></ul>
+        <button class="btn btn-success w-100" onclick="formTeams()">Formar Times</button>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-md-6">
+        <h3>Time 1</h3>
+        <table id="team1Table" class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Setor</th>
+              <th>Nível</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+
+      <div class="col-md-6">
+        <h3>Time 2</h3>
+        <table id="team2Table" class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Setor</th>
+              <th>Nível</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+ 
+    <section class="chart-section">
+      <h1 class="text-center mb-4">Porcentajem de Vitoria</h1>
+      <canvas id="resultChart"></canvas>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+  <div class="footer">
+    <p>&copy; 2024 Jorge Diego</p>
+  </div>
+</body>
+</html>
